@@ -45,7 +45,7 @@ def calc(arr: list) -> int:
     k_counter = Counter(counter.values())
     
     k_keys = list(k_counter.keys())
-    cpus = mp.cpu_count() // 2
+    cpus = mp.cpu_count()
     
     chunk = (len(k_keys) // cpus) + (len(k_keys) % cpus)
     
